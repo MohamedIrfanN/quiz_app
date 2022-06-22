@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/score_page/view/widgets.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../constatnts/constraints.dart';
 
 class ScorePageView extends StatelessWidget {
@@ -14,11 +15,11 @@ class ScorePageView extends StatelessWidget {
             kSizedBox,
             title(),
             SizedBox(
-              height: height*0.2,
+              height: 20.h,
             ),
             score(),
             SizedBox(
-              height: height*0.15,
+              height: 15.h,
             ),
             retakeButton()
           ],

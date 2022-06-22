@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../constatnts/constraints.dart';
 import '../../quizpage/view/quiz_page_view.dart';
 
@@ -18,12 +19,12 @@ Widget title() {
 
 Widget takeTriviaButton() {
   return Padding(
-    padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+    padding: EdgeInsets.symmetric(horizontal: 20.w),
     child: ElevatedButton(
         onPressed: () => Get.to(()=> QuizPageView()),
         style: ElevatedButton.styleFrom(
             primary: Colors.orangeAccent,
-            padding: EdgeInsets.symmetric(horizontal: width * 0.05)),
+            padding: EdgeInsets.symmetric(horizontal: 5.w)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [

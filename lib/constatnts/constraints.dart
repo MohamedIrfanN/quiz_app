@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
-final width = MediaQueryData.fromWindow(WidgetsBinding.instance!.window).size.width;
-final height = MediaQueryData.fromWindow(WidgetsBinding.instance!.window).size.height;
+
 
 
 const snackBar = SnackBar(
@@ -29,4 +29,4 @@ final loading = Column(
   ],
 );
 
-final kSizedBox = SizedBox(height: height*0.05,);
+final kSizedBox = SizedBox(height: 5.h,);

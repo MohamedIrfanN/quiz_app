@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../constatnts/constraints.dart';
 import '../../feature/homepage/view/homepage_view.dart';
 import '../../feature/quizpage/controller/quiz_controller.dart';
@@ -25,7 +26,7 @@ Widget score() {
         style: TextStyle(
             fontSize: 25, color: Colors.black, fontWeight: FontWeight.w400),),
       SizedBox(
-        height: height*0.01,
+        height: 1.h,
       ),
       Text("${controller.marks.toString()}/100",
         style: const TextStyle(
@@ -37,12 +38,12 @@ Widget score() {
 
 Widget retakeButton() {
   return Padding(
-    padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+    padding: EdgeInsets.symmetric(horizontal: 20.w),
     child: ElevatedButton(
       onPressed: () => Get.offAll(()=> const HomePageView()),
       style: ElevatedButton.styleFrom(
           primary: Colors.orangeAccent,
-          padding: EdgeInsets.symmetric(horizontal: width * 0.1)),
+          padding: EdgeInsets.symmetric(horizontal: 10.w)),
       child: const Text(
         "RETAKE TRIVIA",
         style: TextStyle(

@@ -4,6 +4,7 @@ import 'package:quiz_app/constatnts/constraints.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/feature/quizpage/controller/quiz_controller.dart';
 import 'package:quiz_app/feature/quizpage/view/widgets.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 
 class QuizPageView extends StatelessWidget {
@@ -24,14 +25,14 @@ class QuizPageView extends StatelessWidget {
           SingleChildScrollView(
             child: SafeArea(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: width*0.05),
+                padding: EdgeInsets.symmetric(horizontal: 5.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     kSizedBox,
                     title(),
                     SizedBox(
-                      height: height*0.1,
+                      height: 10.h,
                     ),
                     Text("Question ${controller.qNo.value+1}",style: const TextStyle(color: Colors.blueGrey,fontSize: 15),),
                     question(),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../constatnts/constraints.dart';
 import '../controller/quiz_controller.dart';
@@ -8,7 +9,7 @@ Widget question(){
   final controller = Get.find<QuizController>();
   String question = controller.quiz!.results![controller.qNo.value].question!;
   return Container(
-    padding: EdgeInsets.symmetric(vertical: height*0.01),
+    padding: EdgeInsets.symmetric(vertical: 1.h),
     child:  Text(question,
       style: const TextStyle(color: Colors.black,fontSize: 14),
     ),

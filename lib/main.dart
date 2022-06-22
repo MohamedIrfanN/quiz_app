@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'feature/homepage/view/homepage_view.dart';
 
 void main() {
@@ -13,12 +13,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Quiz App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePageView(),
+    return ResponsiveSizer(
+        builder: (BuildContext , Orientation , ScreenType ) {
+          return GetMaterialApp(
+            title: 'Quiz App',
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            home: const HomePageView(),
+          );
+        }
     );
   }
 }
