@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -16,8 +15,6 @@ final loading = Column(
   children: [
     LoadingAnimationWidget.newtonCradle(
       color: Colors.indigoAccent,
-      // rightDotColor: Colors.indigoAccent,
-      // leftDotColor: Colors.pink,
       size: 120,
     ),
     Row(
